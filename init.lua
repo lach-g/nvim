@@ -247,6 +247,9 @@ vim.o.termguicolors = true
 vim.api.nvim_set_keymap("i", "jj", "<esc>", {noremap = true})
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
+-- Change colon to semicolon in normal module
+vim.api.nvim_set_keymap("n", ";", ":", {noremap = true})
+
 -- Remap for dealing with word wrap
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
